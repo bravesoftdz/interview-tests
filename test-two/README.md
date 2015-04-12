@@ -2,9 +2,12 @@ A implementação descrita no teste é possível, [exemplo de implementação](h
 
 No teste proposto, da forma com entendi, de certa forma não está exigindo o uso de polimorfismo pois os atributos possuem uma única forma em cada classe.
 
+Como eu etendi o problema proposto:
 
-
-Eu criei uma extensão desse teste, o teste 4, que implementa algumas modificações do esquema de atributos.
+* Classe `A` possui o atributo `X`.
+* Classe `B` possui o atributo `Y` e estende a classe `A`.
+* Classe `C` possui o atributo `Z` e estende a classe `A`.
+* Classe `D` **não** possui atributos e estende a classe `B` e `C`.
 
 Para rodas os testes e acompanhas o comportamento de cada classe execute:
 ```
