@@ -1,16 +1,26 @@
-A implementação descrita no teste é possível, [exemplo de implementação](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py), ao acessar o atributo `X` através de uma instancia da classe `D` é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`
+A implementação descrita no teste foi possível ser feita da [seguinte forma](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py).
 
-No teste proposto, da forma com entendi, de certa forma não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes.
+Ao acessar o atributo `X` através de uma instancia da classe `D` é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`.
+
+Apesar da clase `D` herdar as classes `B` e `C`, que ambas herdam da clase `A`, somente uma instancia de `A` e criada na herança.
+
+```
+python3.4 src/tests.py -d
+```
+
+No teste proposto, da forma com entendi, de certa forma não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes. Veja o esquema que eu implementei. Utiliei o método construtor `__init__` apenas para informar quando a classe eta sendo criada.
 
 * Classe `A` possui o atributo `X`.
 * Classe `B` possui o atributo `Y` e estende a classe `A`.
 * Classe `C` possui o atributo `Z` e estende a classe `A`.
 * Classe `D` **não** possui atributos e estende a classe `B` e `C`.
 
-Para rodas os testes e acompanhas o comportamento de cada classe execute:
+Para acompanhar o comportamento de cada classe execute:
+
 ```
 python3.4 src/tests.py -a -b -c -d
 ```
+
 Referências:
 * http://en.wikipedia.org/wiki/Virtual_method_table
 * http://stackoverflow.com/questions/4714136/python-how-to-implement-virtual-methods
