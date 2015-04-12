@@ -1,8 +1,8 @@
 # interview-tests
 Algorithms for interview Python.
 
-Lista de testes:
+List of tests:
 
-* [Teste 1](https://github.com/johnidm/interview-tests/tree/master/test-one)
-* [Teste 2](https://github.com/johnidm/interview-tests/tree/master/test-two)
-* [Teste 3](https://github.com/johnidm/interview-tests/tree/master/test-three)
+* [Test 1](https://github.com/johnidm/interview-tests/tree/master/test-one)
+* [Test 2](https://github.com/johnidm/interview-tests/tree/master/test-two)
+* [Test 3](https://github.com/johnidm/interview-tests/tree/master/test-three)
