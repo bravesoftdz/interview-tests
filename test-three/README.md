@@ -58,19 +58,16 @@ CREATE EXTENSION pg_trgm;
 
 ###### Índice um
 
-3110 ms com 4194304 registros 
 ```
 CREATE INDEX idx_email ON users USING btree (email)
 ```
 
 ###### Índice dois
 
-26228 ms com 4194304 registros 
 ```
 CREATE INDEX idx_email ON users USING gist (email gist_trgm_ops);
 ```
 
-12308 ms com 4194304 registros 
 ###### Índice três
 CREATE INDEX idx_email ON users USING gin (email gin_trgm_ops);
 
