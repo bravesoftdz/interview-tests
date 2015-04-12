@@ -50,7 +50,7 @@ O índice abaixo executou a consulta eentre **20 ms** a **60 ms** com cerca de *
 CREATE INDEX idx_email ON users USING btree (email varchar_pattern_ops);
 ```
 
-O índice que apresentou o melhor resultado utiliza o algoritmo de busca B-Tree com a extenção `varchar_pattern_ops` melhor indicado para os casos em que o “curinga” da busca textual fica no final da texto.
+O índice que apresentou o melhor resultado utiliza o algoritmo de busca [B-Tree](http://www.postgresql.org/docs/9.2/static/indexes-types.html) com o operador de classe [varchar_pattern_ops](http://www.postgresql.org/docs/9.3/static/indexes-opclass.html) que é indicado para os casos em que o “curinga” em uma busca textual usando LIKE fica no final da texto.
 
 ##### Outros índices usados no teste
 
