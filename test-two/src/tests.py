@@ -25,6 +25,8 @@ def run_checks_class_D():
 	assert(d.Y == "Class B atribute Y extend class A")
 	assert(d.Z == "Class C atribute Z extend class A")
 
+	
+
 
 def invoke_test(test):
     return {
