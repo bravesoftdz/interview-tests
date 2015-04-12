@@ -1,4 +1,3 @@
-test-one/__pycache__
-test-two/__pycache__
-test-three/__pycache__
-
+test-one/src/__pycache__
+test-two/src/__pycache__
+test-three/src/__pycache__
