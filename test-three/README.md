@@ -1,42 +1,42 @@
-Código fonte utilizado está no diretório `/src`
+Código fonte utilizado nesse teste está no diretório `/src`
 
-O DB utilizado foi o Postgresql.
+DB utilizado foi o [Postgresql](http://www.postgresql.org/).
 
 #### Requisitos
 
-Instalação da [libpq](http://www.postgresql.org/docs/9.4/static/libpq.html) e das bibliotecas Python.
+Instalação da [libpq](http://www.postgresql.org/docs/9.4/static/libpq.html) e de algumas bibliotecas Python.
 
 ```
 sudo apt-get install libpq-dev python3-dev
 ```
 
-Biblioteca [Psycopg](http://initd.org/psycopg/) utilizada na comunicação com o Postgresql
+Instalação da biblioteca [Psycopg](http://initd.org/psycopg/) utilizada na comunicação com o Postgresql
 
 ```
 sudo pip install psycopg2
 ```
 
-Nos testes de performance é recomendado reiniciar o serviço do Postgre para evitar que os dados fiquem em cache e comprometam a contagem de tempo.
+Nos testes de performance, a cada execução é recomendado reiniciar o serviço do Postgre para não comprometer a performance das consulta (chace de dados, etc.).
 
 ```
 sudo /etc/init.d/postgresql restart 
 ```
 
-Para criar os objetos no DB:
+Para criar os objetos no DB, esse comando demora alguns minutos para executar:
 ```bash
-python3.4 main.py --initdb
+python3.4 src/main.py --initdb
 ``` 
 
-Para rodar a query no DB:
+Para rodar a consulta do teste no DB:
 ```bash
 python3.4 main.py --runquery
 ``` 
-
 
 ### Resultado
 
 #### Consulta executada
 
+Esse consulta foi a exigida no teste.
 ```
 SELECT email FROM users WHERE email LIKE '@gmail.com%' GROUP BY email
 ```
