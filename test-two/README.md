@@ -2,19 +2,22 @@ A implementação descrita no teste foi possível ser feita da [seguinte forma](
 
 Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`.
 
-Apesar da clase `D` herdar as classes `B` e `C`, ambas herdam a clase `A`, somente uma instancia de `A` e criada na herança.
+No teste proposto, da forma com entendi, não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes. Veja o "esquema" que eu entendi: 
+
+* Classe `A` possui o atributo `X`.
+* Classe `B` possui o atributo `Y` e estende a classe `A`.
+* Classe `C` possui o atributo `Z` e estende a classe `A`.
+* Classe `D` **não** possui atributos e estende a classe `B` e `C`.
+
+Apesar da clase `D` herdar as classes `B` e `C`, `B` e `C` herdam a clase `A`, somente uma instancia de `A` é criada na herança.
+
 O comando abaixo mostra esse comportamento, execute:
 
 ```
 python3.4 src/tests.py -d
 ```
 
-No teste proposto, da forma com entendi, não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes. Veja o esquema que eu implementei. 
 
-* Classe `A` possui o atributo `X`.
-* Classe `B` possui o atributo `Y` e estende a classe `A`.
-* Classe `C` possui o atributo `Z` e estende a classe `A`.
-* Classe `D` **não** possui atributos e estende a classe `B` e `C`.
 
 Para acompanhar o comportamento de cada classe execute:
 
