@@ -39,7 +39,7 @@ python3.4 src/main.py --runquery
 
 Comando SQL utilizado no teste.
 ```
-SELECT name, email FROM users WHERE email LIKE '@gmail.com%' GROUP BY name, email
+EXPLAIN SELECT name, email FROM users WHERE email LIKE '@gmail.com%' GROUP BY name, email
 ```
 
 #### Índice com melhor desempenho
