@@ -30,7 +30,7 @@ python3.4 src/main.py --initdb
 
 Para rodar a consulta SQL exigida no teste, execute:
 ```bash
-python3.4 main.py --runquery
+python3.4 src/main.py --runquery
 ``` 
 
 ### Resultado
