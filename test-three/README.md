@@ -1,4 +1,4 @@
-Código fonte utilizado nesse teste está no diretório `/src`
+Código fonte utilizado nesse teste está no diretório [/src](https://github.com/johnidm/interview-tests/tree/master/test-three/src)
 
 DB utilizado foi o [Postgresql](http://www.postgresql.org/).
 
@@ -33,7 +33,7 @@ Criando índices no DB:
 ```
 python3.4 src/main.py --createindex "<statement>"
 ```
-> onde <statement> é o comando SQL utilizado para criar o índice.
+> onde **statement** é o comando SQL utilizado para criar o índice.
 
 Para rodar a consulta SQL exigida no teste, execute:
 ```bash
