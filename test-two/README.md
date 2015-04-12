@@ -19,7 +19,7 @@ python3.4 src/tests.py -d
 
 Baseado na execução do algoritmo do arquivo [virtual_table.py](https://github.com/johnidm/interview-tests/blob/master/test-two/src/virtual_table.py), `python3.4 src/virtual_table.py`, cheguei a na conclusão desenhada no diagrama abaixo.
 
-![](imagens/vt.png)
+![images/vt.png]
 
 Para acompanhar o comportamento de cada classe, execute:
 
