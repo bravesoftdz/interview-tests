@@ -17,15 +17,17 @@ O comando abaixo mostra esse comportamento, execute:
 python3.4 src/tests.py -d
 ```
 
+Baseado na execução do algoritmo do arquivo , chegue a na conclusão desenhada no diagrama abaixo.
 
+![](imagens/vt.png)
 
-Para acompanhar o comportamento de cada classe execute:
+Para acompanhar o comportamento de cada classe, execute:
 
 ```
 python3.4 src/tests.py -a -b -c -d
 ```
 
-> Utiliei o método construtor `__init__` apenas para informar quando a classe esta sendo criada.
+> Utilizei o método construtor `__init__` apenas para informar quando a classe esta sendo criada.
 
 Referências:
 * http://en.wikipedia.org/wiki/Virtual_method_table
