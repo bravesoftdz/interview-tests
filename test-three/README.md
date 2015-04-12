@@ -59,7 +59,7 @@ CREATE INDEX idx_email ON users USING btree (email varchar_pattern_ops);
 
 O índice que apresentou o melhor resultado utiliza o algoritmo de busca [B-Tree](http://www.postgresql.org/docs/9.2/static/indexes-types.html) com o operador de classe [varchar_pattern_ops](http://www.postgresql.org/docs/9.3/static/indexes-opclass.html) que é indicado para os casos em que o “curinga” em uma busca textual está no final da texto.
 
-##### Outros índices usados no teste
+##### Outros índices usados no teste e que também apresentaram bons resultados
 
 ```
 CREATE EXTENSION pg_trgm;
@@ -68,16 +68,11 @@ CREATE EXTENSION pg_trgm;
 ###### Índice um
 
 ```
-CREATE INDEX idx_email ON users USING btree (email)
+CREATE INDEX idx_email ON users USING gist (email gist_trgm_ops);
 ```
 
 ###### Índice dois
 
-```
-CREATE INDEX idx_email ON users USING gist (email gist_trgm_ops);
-```
-
-###### Índice três
 ```
 CREATE INDEX idx_email ON users USING gin (email gin_trgm_ops);
 ```
@@ -86,5 +81,7 @@ Descartei outras possibilidades de testes por entender que a melhor performance 
 
 Referencias:
 * http://www.johnidouglas.com.br/dicas-para-melhorar-a-performance-em-comandos-sql-parte-1/
+* http://stackoverflow.com/questions/1566717/postgresql-like-query-performance-variations
 * http://blog.2ndquadrant.com/text-search-strategies-in-postgresql/
 * http://www.postgresonline.com/journal/archives/212-PostgreSQL-9.1-Trigrams-teaching-LIKE-and-ILIKE-new-tricks.html/
+* http://dba.stackexchange.com/questions/10694/pattern-matching-with-like-similar-to-or-regular-expressions-in-postgresql
