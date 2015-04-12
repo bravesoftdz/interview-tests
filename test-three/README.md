@@ -22,12 +22,13 @@ Nos testes de performance, a cada execução é recomendado reiniciar o serviço
 sudo /etc/init.d/postgresql restart 
 ```
 
-Para criar os objetos no DB, esse comando demora alguns minutos para executar:
+Para criar os objetos no DB, execute: 
 ```bash
 python3.4 src/main.py --initdb
 ``` 
+> Nota: esse comando demora alguns minutos para executar, ele cria toda a estrura de testes e popula a tabela `users` com 4.194.304 registros.
 
-Para rodar a consulta do teste no DB:
+Para rodar a consulta SQL exigida no teste, execute:
 ```bash
 python3.4 main.py --runquery
 ``` 
