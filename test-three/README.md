@@ -44,13 +44,13 @@ SELECT name, email FROM users WHERE email LIKE '@gmail.com%' GROUP BY name, emai
 
 #### Índice com melhor desempenho
 
-O índice abaixo executou a consulta eentre **20 ms** a **60 ms** com cerca de **4194304** registros.
+O índice abaixo permitiu que a consulta fosse executada com um tempo de **6186 ms** com cerca de **4194304** registros.
 
 ```
 CREATE INDEX idx_email ON users USING btree (email varchar_pattern_ops);
 ```
 
-O índice que apresentou o melhor resultado utiliza o algoritmo de busca [B-Tree](http://www.postgresql.org/docs/9.2/static/indexes-types.html) com o operador de classe [varchar_pattern_ops](http://www.postgresql.org/docs/9.3/static/indexes-opclass.html) que é indicado para os casos em que o “curinga” em uma busca textual usando LIKE fica no final da texto.
+O índice que apresentou o melhor resultado utiliza o algoritmo de busca [B-Tree](http://www.postgresql.org/docs/9.2/static/indexes-types.html) com o operador de classe [varchar_pattern_ops](http://www.postgresql.org/docs/9.3/static/indexes-opclass.html) que é indicado para os casos em que o “curinga” em uma busca textual usando LIKE fique no final da texto (POSTFIX).
 
 ##### Outros índices usados no teste
 
