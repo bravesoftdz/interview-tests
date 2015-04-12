@@ -19,3 +19,4 @@ Referências:
 * http://legacy.python.org/workshops/1998-11/proceedings/papers/lowis/lowis.html
 * http://www.johnidouglas.com.br/vinculacao-de-metodos-em-delphi/
 * http://stackoverflow.com/questions/15416733/what-is-the-difference-between-dynamic-and-virtual-methods/
+* http://pages.cs.wisc.edu/~rkennedy/vmt
