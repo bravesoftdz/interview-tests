@@ -60,7 +60,7 @@ CREATE EXTENSION pg_trgm;
 
 3110 ms com 4194304 registros 
 ```
-CREATE INDEX idx_email ON users USING btree (email ASC)
+CREATE INDEX idx_email ON users USING btree (email)
 ```
 
 ###### Índice dois
