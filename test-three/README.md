@@ -28,6 +28,12 @@ python3.4 src/main.py --initdb
 ```
 > Nota: esse comando demora alguns minutos para executar, ele cria toda a estrura do DB e popula a tabela `users` com 4.194.304 registros.
 
+
+Criando índices no DB
+```
+python3.4 src/main.py --createindex "<statement>"
+```
+
 Para rodar a consulta SQL exigida no teste, execute:
 ```bash
 python3.4 src/main.py --runquery
