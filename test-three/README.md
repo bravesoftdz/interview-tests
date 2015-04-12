@@ -16,7 +16,7 @@ Instalação da biblioteca [Psycopg](http://initd.org/psycopg/) utilizada na com
 sudo pip install psycopg2
 ```
 
-Nos testes de performance, a cada execução é recomendado reiniciar o serviço do Postgre para não comprometer a performance das consulta (chace de dados, etc.).
+Nos testes de performance, a cada execução é recomendado reiniciar o serviço do Postgre para não comprometer a resultado das consultas.
 
 ```
 sudo /etc/init.d/postgresql restart 
