@@ -54,7 +54,9 @@ O índice que apresentou o melhor resultado utiliza o algoritmo de busca [B-Tree
 
 ##### Outros índices usados no teste
 
+```
 CREATE EXTENSION pg_trgm;
+```
 
 ###### Índice um
 
@@ -69,7 +71,9 @@ CREATE INDEX idx_email ON users USING gist (email gist_trgm_ops);
 ```
 
 ###### Índice três
+```
 CREATE INDEX idx_email ON users USING gin (email gin_trgm_ops);
+```
 
 Descartei outras possibilidade de testes por entender que a melhor performace já foi obtida;
 
