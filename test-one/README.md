@@ -1,4 +1,4 @@
-## Nesse teste foi desenvolvido duas soluções
+### Nesse teste foi proposto duas soluções
 
 #### Primeira solução.
 
