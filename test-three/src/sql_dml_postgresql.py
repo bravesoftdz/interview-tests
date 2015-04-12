@@ -15,10 +15,11 @@ class Postgresql:
 			with closing(conn.cursor()) as cur:	
 				
 				try:
-					#self.__create_sequence(cur)
+					self.__create_sequence(cur)
 					self.__create_table(cur)
 					self.__delete_data(cur)
 					self.__feet_data_table(cur)
+					self.__create_index_email(cur)
 
 					conn.commit()
 				except DatabaseError as e:
@@ -46,15 +47,15 @@ class Postgresql:
 
 
 	def __feet_data_table(self, cur):
-		users = [ ("Fulano"  , "fulano@gmail.com.br"  ),
-				  ("Ciclano" , "ciclano@gmail.com.ar" ),
-				  ("Beltrano", "beltrano@gmail.com.us"),
-				  ("Trajano" , "trajano@gmail.com.it" ) ]
+		users = [ ("Fulano"  , "fulano@gmail.com"  ),
+				  ("Ciclano" , "ciclano@gmail.com" ),
+				  ("Beltrano", "beltrano@gmail.com"),
+				  ("Trajano" , "trajano@hotmail.com" ) ]
 
 		cur.executemany('INSERT INTO users(name, email) values(%s, %s);', users)
 
 		# Geometric progression - http://en.wikipedia.org/wiki/Geometric_progression
-		# Insert about 4194304 records
+		# INsere cerca 4194304 de registros
 		for _ in range(20): 
 			cur.execute('''
 				INSERT INTO users(name, email)
@@ -64,9 +65,9 @@ class Postgresql:
 				''')	
 
 
-	def create_index_email(self):
+	def __create_index_email(self, cur):
 		cur.execute('''
-				
+				CREATE INDEX idx_email ON users USING btree (email varchar_pattern_ops);
 				''')
 				
 
