@@ -19,13 +19,19 @@ sudo pip install psycopg2
 Nos testes de performance é recomendado reiniciar o serviço do Postgre para evitar que os dados fiquem em cache e comprometam a contagem de tempo.
 
 ```
-/etc/init.d/postgresql restart 
+sudo /etc/init.d/postgresql restart 
 ```
 
-Para executar o projeto digite:
+Para criar os objetos no DB:
 ```bash
-python3.4 main.py
+python3.4 main.py --initdb
 ``` 
+
+Para rodar a query no DB:
+```bash
+python3.4 main.py --runquery
+``` 
+
 
 ### Resultado
 
@@ -37,7 +43,7 @@ SELECT email FROM users WHERE email LIKE '@gmail.com%' GROUP BY email
 
 #### Índice com melhor desempenho
 
-O índice abaixo executou a consulta em **20 ms** com cerca de **4194304** registros.
+O índice abaixo executou a consulta eentre **20 ms** a **60 ms** com cerca de **4194304** registros.
 
 ```
 CREATE INDEX idx_email ON users USING btree (email varchar_pattern_ops);
