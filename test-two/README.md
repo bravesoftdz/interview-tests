@@ -1,14 +1,15 @@
 A implementação descrita no teste foi possível ser feita da [seguinte forma](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py).
 
-Ao acessar o atributo `X` através de uma instancia da classe `D` é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`.
+Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`.
 
-Apesar da clase `D` herdar as classes `B` e `C`, que ambas herdam da clase `A`, somente uma instancia de `A` e criada na herança.
+Apesar da clase `D` herdar as classes `B` e `C`, ambas herdam a clase `A`, somente uma instancia de `A` e criada na herança.
+O comando abaixo mostra esse comportamento, execute:
 
 ```
 python3.4 src/tests.py -d
 ```
 
-No teste proposto, da forma com entendi, de certa forma não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes. Veja o esquema que eu implementei. Utiliei o método construtor `__init__` apenas para informar quando a classe eta sendo criada.
+No teste proposto, da forma com entendi, não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes. Veja o esquema que eu implementei. 
 
 * Classe `A` possui o atributo `X`.
 * Classe `B` possui o atributo `Y` e estende a classe `A`.
@@ -20,6 +21,8 @@ Para acompanhar o comportamento de cada classe execute:
 ```
 python3.4 src/tests.py -a -b -c -d
 ```
+
+> Utiliei o método construtor `__init__` apenas para informar quando a classe esta sendo criada.
 
 Referências:
 * http://en.wikipedia.org/wiki/Virtual_method_table
