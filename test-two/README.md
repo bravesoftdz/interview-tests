@@ -1,6 +1,6 @@
 A implementação descrita no teste é possível, [exemplo de implementação](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py), ao acessar o atributo `X` através de uma instancia da classe `D` é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`
 
-No teste proposto, da forma com entendi, de certa forma não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma **única forma** de implementação nas classes.
+No teste proposto, da forma com entendi, de certa forma não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes.
 
 * Classe `A` possui o atributo `X`.
 * Classe `B` possui o atributo `Y` e estende a classe `A`.
