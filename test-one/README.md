@@ -1,4 +1,4 @@
-### Nesse teste foi proposto duas soluções
+### Nesse teste foi proposto duas soluções:
 
 #### Primeira solução.
 
@@ -31,6 +31,6 @@ python3.4 src/test_langlands_custom.py
 
 Código fonte da implementação [langlands_custom.py](https://github.com/johnidm/interview-tests/blob/master/test-one/src/langlands_custom.py).
 
-O prefixo `Langlands` utilizado nas classes e arquivos é uma referenda a [Robert Langlands](http://en.wikipedia.org/wiki/Robert_Langlands) professor de matemática responsável pelo [Programa de Langlands](http://en.wikipedia.org/wiki/Langlands_program).
+O prefixo `Langlands` utilizado nas classes e arquivos é uma referência a [Robert Langlands](http://en.wikipedia.org/wiki/Robert_Langlands) professor de matemática responsável pelo [Programa de Langlands](http://en.wikipedia.org/wiki/Langlands_program).
 
 Referência: [Amor a Matemática - Edward Frenkel](http://www.casadapalavra.com.br/livros/602/Amor+e+matematica).
