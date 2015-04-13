@@ -19,14 +19,15 @@ Baseado na execução do algoritmo do arquivo [virtual_table.py](https://github.
 
 ![](https://raw.githubusercontent.com/johnidm/interview-tests/master/test-two/images/vt.png)
 
-Para acompanhar o comportamento de cada classe, execute:
+Para ver o comportamento de cada classe, execute:
 
 ```
 python3.4 src/tests.py -a -b -c -d
 ```
 
-> Foi utilizado método construtor `__init__` apenas para informar quando a classe esta sendo criada.
-> A classe `D` herda as classes `B` e `C`. As classes `B` e `C` herdam a classe `A`. Somente uma instância de `A` é criada na herança.
+> Foi utilizado o método construtor `__init__` apenas para informar quando a classe esta sendo criada.
+
+> A classe `D` herda as classes `B` e `C`. As classes `B` e `C` herdam a classe `A`. Somente uma instância de `A` é criada nas heranças da classe `D`.
 
 Referências:
 * http://en.wikipedia.org/wiki/Virtual_method_table
