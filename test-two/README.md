@@ -1,6 +1,6 @@
-A implementação solicitada no teste foi feita da [seguinte forma](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py):
+A implementação desse teste pode ser consultada nesse [link](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py):
 
-Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`.
+Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementação desse atributo existe somente na classe `A`.
 
 A forma que implementei não está usando polimorfismo. Os atributos `X`, `Y`, `Z` possuem uma "única forma" implementada nas classes. Segue o "esquema": 
 
