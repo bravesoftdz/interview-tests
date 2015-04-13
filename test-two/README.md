@@ -5,11 +5,11 @@ A forma que implementei não está usando polimorfismo. Os atributos `X`, `Y`, `
 * Classe `A` possui o atributo `X`.
 * Classe `B` possui o atributo `Y` e estende a classe `A`.
 * Classe `C` possui o atributo `Z` e estende a classe `A`.
-* Classe `D` **não** possui atributos e estende a classe `B` e `C`.
+* Classe `D` **não** possui atributos e estende as classes `B` e `C`.
 
 Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementação desse atributo existe somente na classe `A`.
 
-O comando abaixo mostra esse comportamento:
+O comando abaixo exibe esse comportamento:
 
 ```
 python3.4 src/tests.py -d
@@ -19,15 +19,13 @@ Baseado na execução do algoritmo do arquivo [virtual_table.py](https://github.
 
 ![](https://raw.githubusercontent.com/johnidm/interview-tests/master/test-two/images/vt.png)
 
+> A classe `D` herda as classes `B` e `C`. As classes `B` e `C` herdam a classe `A`. Somente uma instância de `A` é criada nas heranças da classe `D`.
+
 Para ver o comportamento de cada classe, execute:
 
 ```
 python3.4 src/tests.py -a -b -c -d
 ```
-
-> Foi utilizado o método construtor `__init__` apenas para informar quando a classe esta sendo criada.
-
-> A classe `D` herda as classes `B` e `C`. As classes `B` e `C` herdam a classe `A`. Somente uma instância de `A` é criada nas heranças da classe `D`.
 
 Referências:
 * http://en.wikipedia.org/wiki/Virtual_method_table
