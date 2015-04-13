@@ -16,7 +16,7 @@ Para rodar os testes, execute:
 python3.4 src/test_langlands_custom.py
 ```
 
-Código fonte de implementação [langlands_numpy.py](https://github.com/johnidm/interview-tests/blob/master/test-one/src/langlands_numpy.py).
+Código fonte da implementação [langlands_numpy.py](https://github.com/johnidm/interview-tests/blob/master/test-one/src/langlands_numpy.py).
 
 
 #### Segunda solução
@@ -29,7 +29,7 @@ Para rodar os testes, execute:
 python3.4 src/test_langlands_custom.py
 ```
 
-Código fonte de implementação [langlands_custom.py](https://github.com/johnidm/interview-tests/blob/master/test-one/src/langlands_custom.py).
+Código fonte da implementação [langlands_custom.py](https://github.com/johnidm/interview-tests/blob/master/test-one/src/langlands_custom.py).
 
 O prefixo `Langlands` utilizado nas classes e arquivos é uma referenda a [Robert Langlands](http://en.wikipedia.org/wiki/Robert_Langlands) professor de matemática responsável pelo [Programa de Langlands](http://en.wikipedia.org/wiki/Langlands_program).
 
