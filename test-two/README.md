@@ -1,13 +1,13 @@
-A implementação desse teste pode ser consultada nesse [link](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py):
+A implementação desse teste esta no arquivo [main.py](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py).
 
-Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementação desse atributo existe somente na classe `A`.
-
-A forma que implementei não está usando polimorfismo. Os atributos `X`, `Y`, `Z` possuem uma "única forma" implementada nas classes. Segue o "esquema": 
+A forma que implementei não está usando polimorfismo. Os atributos `X`, `Y`, `Z` possuem uma "única forma" implementada nas classes. Segue o "esquema":
 
 * Classe `A` possui o atributo `X`.
 * Classe `B` possui o atributo `Y` e estende a classe `A`.
 * Classe `C` possui o atributo `Z` e estende a classe `A`.
 * Classe `D` **não** possui atributos e estende a classe `B` e `C`.
+
+Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementação desse atributo existe somente na classe `A`.
 
 O comando abaixo mostra esse comportamento:
 
