@@ -1,23 +1,21 @@
-A implementação descrita no teste foi possível ser feita da [seguinte forma](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py).
+A implementação solicitada no teste foi feita da [seguinte forma](https://github.com/johnidm/interview-tests/blob/master/test-two/src/main.py):
 
 Ao acessar o atributo `X` através de uma instância da classe `D`, é invocado a implementação do atributo `X` da classe `A`, pois a implementaçao desse atributo existe somente na classe `A`.
 
-No teste proposto, da forma com entendi, não está exigindo o uso de polimorfismo pois os atributos, `X`, `Y`, `Z`  possuem uma "única forma" implementada nas classes. Veja o "esquema" que eu entendi: 
+A forma que implementei não está usando polimorfismo. Os atributos `X`, `Y`, `Z` possuem uma "única forma" implementada nas classes. Segue o "esquema": 
 
 * Classe `A` possui o atributo `X`.
 * Classe `B` possui o atributo `Y` e estende a classe `A`.
 * Classe `C` possui o atributo `Z` e estende a classe `A`.
 * Classe `D` **não** possui atributos e estende a classe `B` e `C`.
 
-Apesar da clase `D` herdar as classes `B` e `C`, `B` e `C` herdam a clase `A`, somente uma instancia de `A` é criada na herança.
-
-O comando abaixo mostra esse comportamento, execute:
+O comando abaixo mostra esse comportamento:
 
 ```
 python3.4 src/tests.py -d
 ```
 
-Baseado na execução do algoritmo do arquivo [virtual_table.py](https://github.com/johnidm/interview-tests/blob/master/test-two/src/virtual_table.py), `python3.4 src/virtual_table.py`, com relaçao a tabela virtual cheguei a conclusão representada no diagrama abaixo.
+Baseado na execução do algoritmo do arquivo [virtual_table.py](https://github.com/johnidm/interview-tests/blob/master/test-two/src/virtual_table.py), `python3.4 src/virtual_table.py`, referente a tabela virtual, chega-se a conclusão representada no diagrama abaixo:
 
 ![](https://raw.githubusercontent.com/johnidm/interview-tests/master/test-two/images/vt.png)
 
@@ -27,7 +25,8 @@ Para acompanhar o comportamento de cada classe, execute:
 python3.4 src/tests.py -a -b -c -d
 ```
 
-> Utilizei o método construtor `__init__` apenas para informar quando a classe esta sendo criada.
+> Foi utilizado método construtor `__init__` apenas para informar quando a classe esta sendo criada.
+> A classe `D` herda as classes `B` e `C`. As classes `B` e `C` herdam a classe `A`. Somente uma instância de `A` é criada na herança.
 
 Referências:
 * http://en.wikipedia.org/wiki/Virtual_method_table
